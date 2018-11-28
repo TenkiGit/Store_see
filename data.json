@@ -1,0 +1,16 @@
+[
+    {
+        "s_name":"A",
+        "in_today":3,
+        "out_now":2,
+        "now_s":1,
+        "loss_now":-2
+    },
+    {
+         "s_name":"B",
+        "in_today":3,
+        "out_now":1,
+        "now_s":2,
+        "loss_now":-1
+    }
+]
