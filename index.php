@@ -17,13 +17,14 @@ function main(){
 	$params["user_data"] = [];
 	$filepath="./data.csv";
 
-	 $arr = json_decode($json,true);
-
-    echo "<pre>";
-    foreach($arr as $v) {
-      var_dump($v["s_name"]);
-    }
-    echo "</pre>";
+	 $fp = fopen($filepath, "r");
+while ($data = fgetcsv($fp, 10000)) {
+  print "<tr>";
+  foreach ($data as $d) {
+    print "<td>$d</td>";
+  }
+  print "</tr>\n";
+}
 
 	$contents = common::html_output($template,$params);
 
