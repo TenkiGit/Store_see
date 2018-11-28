@@ -15,7 +15,7 @@ function main(){
 	//テンプレートを指定
 	$template = './template/index.html';
 	$params["user_data"] = [];
-	// $params['ID'];
+	
 
 	
 
