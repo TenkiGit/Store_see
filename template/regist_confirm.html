@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="fb:admins" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="format-detection" content="telephone=no">
+	<link rev="made" href="">
+	<link rel="index" href="">
+	<link rel="shortcut icon" href="">
+	<link rel="icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="canonical" href="">
+	<meta property="og:url" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<title>hello world!!</title>
+	<meta property="og:title" content="">
+	<link rel="stylesheet" type="text/css" href="/template/Style.css">
+</head>
+<body>
+
+<div class="container">
+	
+	<a href="/regist.php">戻る</a>
+	
+	<div class ="regist">
+	<h2>内容確認</h2>
+	
+	<div>
+		<label>・名前</label>
+		<p class="conf_in"><?php echo $params['name'] ?></p>
+	</div>
+	<div>
+		<label>・メールアドレス</label>
+		<p class="conf_in"><?php echo $params['email'] ?></p>
+	</div>
+	<div>
+		<label>・学籍番号</label>
+		<p class="conf_in"><?php echo $params['studentID'] ?></p>
+	</div>
+	<div>
+		<label>・パスワード</label>
+		<p class="conf_in"><?php echo $params['password'] ?></p>
+	</div>
+	
+
+	<form action='/regist_mail.php' method="POST">
+	<input type='hidden' name ="inp_name" value=<?php echo $params['name'] ?> >
+	<input type="hidden" name="inp_email" value=<?php echo $params['email'] ?> >
+	<input type="hidden" name="inp_studentID" value=<?php echo $params['studentID'] ?> >
+	<input type="hidden" name="inp_pass" value=<?php echo $params['repassword'] ?>>
+	<input type="submit" name="OK!" value="OK!">
+	<!-- submitないと飛ばないぞぉ！ -->
+	</form>
+
+	</div>
+
+	<!-- <input type = 'button' value ='戻る' onclick="history.back()"> -->
+
+	
+
+	
+
+</div>
+</body>
+</html>
+
+

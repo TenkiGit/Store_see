@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="fb:admins" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="format-detection" content="telephone=no">
+	<link rev="made" href="">
+	<link rel="index" href="">
+	<link rel="shortcut icon" href="">
+	<link rel="icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="canonical" href="">
+	<meta property="og:url" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<title>regist</title>
+	<meta property="og:title" content="">
+	<link rel="stylesheet" type="text/css" href="/template/Style.css">
+</head>
+
+<body>
+
+<script type="text/javascript">
+	function check() {
+		// console.log(document.regist.password.value);
+		// console.log(document.regist.repassword.value);
+		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''
+			||document.regist.name.value==''||document.regist.job.value==''){
+			alert("全ての項目において入力してください");
+			return false;
+		}
+		
+		if(document.regist.password.value != document.regist.repassword.value){
+				alert("パスワードが一致しません");
+				return false;
+		}
+		if(document.regist.password.value == document.regist.repassword.value){
+			alert("ようこそ！");
+			return true;
+		}
+				// for(i = 0; i < document.foo.length; i++) {
+				// 	if (document.foo.elements[i].type == "text") {
+				// 		if (document.foo.elements[i].value == '') {
+				// 			 alert("未入力の項目があります。");
+				// 			 return false;
+				// 		}
+				// 	}
+				// }
+		return false;
+	}
+</script>
+<div class="container">
+    
+	<form name= 'regist'action='/regist_confirm.php' method="POST"class="regist"onsubmit="return check();">
+		<div>
+		<h2>新規登録ページ</h2>
+		
+		名前:<input type='text' name='name'><br>
+		学籍番号:<input type='text' name='studentID'><br>
+		メールアドレス:<input type="text" name= "email"><br>
+		パスワード:<input tupe="text" name= "password"><br>
+		パスワードを再入力:<input tupe="text" name="repassword"><br>
+		</div>
+
+		<input type = 'submit' value ='登録' name='登録ボタン'>
+    </form>
+
+</div>
+</body>
+</html>

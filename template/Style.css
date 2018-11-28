@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+
+/* 
+@media only screen and (min-width: 401px)  {
+     
+    input[type="submit"]{
+		background:#3f3f4b;
+		color:#fff;
+		margin: 5px;
+	}
+ 
+} デバイスの横幅が401以上の場合 */
+
+p{
+	font-size:15px;
+}
+body.index{
+	background: #FFFAFA;
+	margin: 3px 3px 0 5px;
+}
+body.login{
+	background: #3191ff;
+}
+body{
+	background:#FFFAFA;
+	margin:0
+}
+
+.form{
+	width:340px;
+	height:440px;
+	background:#e6e6e6;
+	border-radius:8px;
+	box-shadow:0 0 40px -10px #000;
+	margin:5px auto;
+	padding:20px 30px;
+	max-width:calc(100vw - 40px);
+	box-sizing:border-box;
+	font-family:'Montserrat',sans-serif;
+	position:relative
+}
+h2{
+	margin:10px 0;
+	padding-bottom:10px;
+	width:180px;
+	color:#78788c;
+	border-bottom:3px solid #78788c
+}
+input{
+	width:100%;
+	padding:10px;
+	box-sizing:border-box;
+	background:none;
+	outline:none;
+	resize:none;
+	border:0;
+	font-family:'Montserrat',sans-serif;
+	transition:all .3s;
+	border-bottom:2px solid #bebed2;
+	font-size: 14px
+}
+h2 {
+	margin-bottom:0.5em;
+	padding-left:10px;
+	font-size:18px;
+	color:#000;
+	border-left:6px solid #e51c77;
+}
+
+input:focus{
+	border-bottom:2px solid #78788c
+}
+p:before{
+	content:attr(type);
+	display:block;
+	margin:28px 0 0;
+	font-size:14px;
+	color:#5a5a5a
+}
+button{
+	float:right;
+	padding:8px 12px;
+	margin:8px 0 0;
+	font-family:'Montserrat',sans-serif;
+	border:2px solid #78788c;
+	background:0;color:#5a5a6e;
+	cursor:pointer;
+	transition:all .3s
+}
+button:hover{
+	background:#78788c;
+	color:#fff
+}
+
+div.form{
+	content:'Hi';
+	margin: 0 auto;
+	/* position:absolute; */
+	bottom:-15px;
+	/* right:-20px; */
+	background:#50505a;
+	color:#fff;
+	width:320px;
+	padding:16px 4px 16px 0;
+	border-radius:6px;
+	font-size:13px;
+	box-shadow:10px 10px 40px -14px #000
+}
+span{
+	margin:0 5px 30px 5px;
+	color: #f02f2f;
+	font-size: 10px;
+}
+div.canonical{
+	margin : 0 auto;
+}
+#sub {
+	float: right;
+	width:32.25%;
+	/*border: 2px solid #e51c77;*/
+}
+#main {
+	float:left;
+	width:65.625%;
+	margin: auto 10px;
+}
+
+.info dt {
+	border-bottom:none;
+}
+.info dd {
+	padding-bottom:1em;
+	border-bottom:1px solid #ddd;
+}
+dl.info{
+	background: #efebff;
+	border-radius: 20px;
+
+}
+.FirstMain{/*ガールズカラー*/
+	color: #e51c77;
+}
+.regist{
+	width:340px;
+	height:500px;
+	background:#e6e6e6;
+	border-radius:8px;
+	box-shadow:0 0 40px -10px #000;
+	margin:5px auto;
+	padding:20px 30px;
+	max-width:calc(100vw - 40px);
+	box-sizing:border-box;
+	font-family:'Montserrat',sans-serif;
+	position:relative
+}
+
+.conf_in{
+	font-weight: bold;
+	/* color: #6091d3;文字色 */
+	background: #FFF;
+	/* border: solid 3px #6091d3;線 */
+	border-radius: 10px;/*角の丸み*/
+	margin:5px auto;
+	/* padding:20px 30px; */
+	text-align: center;
+	
+}
+
+@media screen and (max-width: 767px) {/* デバイスの横幅が400px以下の場合 */
+     
+    input[type="submit"]{
+		width: 45%;
+		height: 15%;
+		/* padding: 15px 40px; */
+		background:#3f3f4b;
+		color:#fff;
+		margin: 5px;
+	}
+
+	#main {
+		float:none;
+		width:100%;
+		margin: 0 0 15px 0;
+	}
+	#sub{
+		float:none;
+		width:100%;
+	}
+	.bnr {
+		overflow:hidden;
+		margin: 15 0 0 15;
+		text-align: center;
+	}
+ 
+} 
