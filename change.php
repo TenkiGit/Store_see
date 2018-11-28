@@ -17,10 +17,7 @@ function main(){
 	$params["user_data"] = [];
 	// $params['ID'];
 
-	if(isset($_COOKIE["ID"]) != NULL){
-		$params['user_data'] = common::get_olluser();
-	}
-	$params['Cookie'] = $_COOKIE;
+	
 
 	$contents = common::html_output($template,$params);
 
