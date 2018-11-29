@@ -42,23 +42,21 @@
 		</tr>
 	</table> -->
 <table>
-	<tr style="background:#ccccff">
-		<th>店舗名</th>
-		<th>出勤者</th>
-		<th>出前者</th>
-		<th>店舗在任</th>
-		<th>必要人数</th>
-	</tr>
+	
 	<?php
 	$filepath="./data.csv";
 	
 	$fp = fopen($filepath, "r");
 	while ($data = fgetcsv($fp, 10000)) {
-	print "<tr>";
-		foreach ($data as $d) {
-		print "<td>$d</td>";
+		if(data==0){
+			print "<tr style="background:#ccccff">";
+		}else{
+		print "<tr>";
 		}
-		print "</tr>\n";
+			foreach ($data as $d) {
+				print "<td>$d</td>";
+			}
+			print "</tr>\n";
 	}
 	
 	?>
