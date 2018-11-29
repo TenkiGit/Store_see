@@ -30,9 +30,9 @@ function main(){
     //print_r($csv);
     
     //if-post==csv->update
-    foreach($csv as $key=>$data["1.店舗名"] ){
+    foreach($csv as $key=>$data ){
    
-        var_dump($data);
+        var_dump($data["1.店舗名"]);
     }
 
 
