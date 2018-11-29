@@ -12,7 +12,7 @@ try{
 
 
 function main(){
-    var_dump($_POST["name"]);
+    var_dump($_POST);
     
 
 	//ログインページへリダイレクト
