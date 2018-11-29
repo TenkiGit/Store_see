@@ -31,7 +31,7 @@ function main(){
     
     //if-post==csv->update
     foreach($csv as $key => $value){
-        echo($data);
+        echo($value);
     }
 
 
