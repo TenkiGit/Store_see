@@ -30,8 +30,9 @@ function main(){
     //print_r($csv);
     
     //if-post==csv->update
-    foreach($csv as $key => $value){
-        echo($value);
+    foreach($csv as $key ){
+   
+        echo $key ;
     }
 
 
