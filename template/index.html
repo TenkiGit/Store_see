@@ -48,7 +48,7 @@
 	
 	$fp = fopen($filepath, "r");
 	while ($data = fgetcsv($fp, 10000)) {
-		if(data==0){
+		if($data==0){
 			print "<tr style="background:#ccccff">";
 		}else{
 		print "<tr>";
