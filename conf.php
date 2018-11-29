@@ -29,8 +29,8 @@ function main(){
     }
     //print_r($csv);
     
-    //if-post==csv→update
-    foreach($csv as $data){
+    //if-post==csv->update
+    foreach($csv[] as $data){
         echo($data);
     }
 
