@@ -32,7 +32,7 @@ function main(){
     //if-post==csv->update
     foreach($csv as $key ){
    
-        echo $key ;
+        var_dump($key);
     }
 
 
