@@ -16,7 +16,7 @@ function main(){
     
     $file = 'data.csv';
     $fp = fopen($file, 'r');
-    $sh = stream_filter_prepend($fp, 'convert.iconv.cp932/utf-8', STREAM_FILTER_READ);
+    //$sh = stream_filter_prepend($fp, 'convert.iconv.cp932/utf-8', STREAM_FILTER_READ);
     $csv = array();
     $keys = null;
     while ($data = fgetcsv($fp, 1000,",")) {
