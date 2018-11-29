@@ -30,8 +30,8 @@ function main(){
     //print_r($csv);
     
     //if-post==csv→update
-    foreach($csv["1.店舗名"] as $data){
-        echo $data;
+    foreach($csv as $data){
+        echo($data);
     }
 
 
