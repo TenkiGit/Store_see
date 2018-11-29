@@ -16,7 +16,7 @@ function main(){
 	$template = './template/change.html';
 	$params["user_data"] = [];
 
-
+    
 	
 
 	$contents = common::html_output($template,$params);
