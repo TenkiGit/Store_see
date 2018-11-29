@@ -13,7 +13,8 @@ try{
 
 function main(){
     // var_dump($_POST);
-    
+
+    //read_csvData
     $file = 'data.csv';
     $fp = fopen($file, 'r');
     //$sh = stream_filter_prepend($fp, 'convert.iconv.cp932/utf-8', STREAM_FILTER_READ);
@@ -26,7 +27,13 @@ function main(){
             $csv[] = array_combine($keys, $data);
         }
     }
-    print_r($csv);
+    //print_r($csv);
+    
+    //if-post==csv→update
+    foreach($csv as $data){
+        echo $data;
+    }
+
 
 	//ログインページへリダイレクト
 	//header("Location:/index.php");
