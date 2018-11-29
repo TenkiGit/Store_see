@@ -45,19 +45,16 @@
 	
 	<?php
 	$filepath="./data.csv";
-	$coun=0;
+	
 	$fp = fopen($filepath, "r");
 	while ($data = fgetcsv($fp, 10000)) {
-		//if($coun==0){
-		//	print "<tr style='background:#ccccff'>";
-		//}else{
 		print "<tr>";
-		//}
+		
 			foreach ($data as $d) {
 				print "<td>$d</td>";
 			}
 			print "</tr>\n";
-		$coun++
+		
 	}
 	
 	?>
