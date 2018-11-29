@@ -16,8 +16,11 @@
         <form name='regist' action='/conf.php' method="POST">
             <div>
                 <h2>変更</h2>
-    
-                店舗名:<input type='text' name='name'><br>
+                <!-- <input type='text' name='name'> -->
+                店舗名:<select name=”name”>
+                    <option value=”A”>A</option>
+                    <option value=”B”>B</option>
+                </select> <br>
                 出勤者:<input type='text' name='come_m'><br>
                 出前者:<input type="text" name="out_m"><br>
                 店舗在任:<input tupe="text" name="store_in"><br>
