@@ -34,7 +34,7 @@ function main(){
    
         // var_dump($data["1.店舗名"]);
         if($data["1.店舗名"]==$_POST["name"]){
-            $count++;
+            $count+=1;
         }
     }
     if($count==1){
