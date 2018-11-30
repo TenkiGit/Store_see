@@ -49,8 +49,8 @@ function main(){
         }
         //書き込み
         $fp = fopen('data2.csv', 'w');
-        foreach($datas as $data){
-    	    $line = implode(',' , $data);
+        foreach($data as $data2){
+    	    $line = implode(',' , $data2);
 	        fwrite($fp, $line . "\n");
         }
         fclose($fp);
