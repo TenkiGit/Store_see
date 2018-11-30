@@ -12,7 +12,7 @@ try{
 
 
 function main(){
-    // var_dump($_POST);
+    var_dump($_POST);
 
     //read_csvData
     $file = 'data.csv';
@@ -29,10 +29,11 @@ function main(){
     }
     //print_r($csv);
     
-    //if-post==csv->update
+    //if-post==csv->OnFlags
     foreach($csv as $key=>$data ){
    
         var_dump($data["1.店舗名"]);
+        // if($data["1.店舗名"]==)
     }
 
 
