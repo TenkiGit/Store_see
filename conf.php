@@ -55,8 +55,9 @@ function main(){
 	    //     fwrite($fp, $line . "\n");
         // }
         // fclose($fp);
+        array_merge($data, $inp_data);
         var_dump($count);
-        var_dump($inp_data);
+        var_dump($data);
         // var_dump($data);
     }
 
