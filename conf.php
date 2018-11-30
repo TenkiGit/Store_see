@@ -32,7 +32,7 @@ function main(){
     //if-post==csv->OnFlags
     foreach($csv as $key=>$data ){
    
-        var_dump($data["1.店舗名"]);
+        // var_dump($data["1.店舗名"]);
         if($data["1.店舗名"]==$_POST["name"]){
             $count++;
         }
@@ -47,13 +47,15 @@ function main(){
                 $data["5.必要人数"]=$_POST["need_m"];
             }
         }
-        //書き込み
-        $fp = fopen('data2.csv', 'w');
-        foreach($data as $data2){
-    	    $line = implode(',' , $data2);
-	        fwrite($fp, $line . "\n");
-        }
-        fclose($fp);
+        // //書き込み
+        // $fp = fopen('data2.csv', 'w');
+        // foreach($data as $data2){
+    	//     $line = implode(',' , $data2);
+	    //     fwrite($fp, $line . "\n");
+        // }
+        // fclose($fp);
+        var_dump($count);
+        var_dump($data);
     }
 
 
