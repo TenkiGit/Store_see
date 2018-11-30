@@ -12,7 +12,8 @@ try{
 
 
 function main(){
-    var_dump($_POST);
+    // var_dump($_POST);
+    $count=0;
 
     //read_csvData
     $file = 'data.csv';
@@ -27,13 +28,32 @@ function main(){
             $csv[] = array_combine($keys, $data);
         }
     }
-    //print_r($csv);
     
     //if-post==csv->OnFlags
     foreach($csv as $key=>$data ){
    
         var_dump($data["1.店舗名"]);
-        // if($data["1.店舗名"]==)
+        if($data["1.店舗名"]==$_POST["name"]){
+            $count++;
+        }
+    }
+    if($count==1){
+        foreach($csv as $key=>$data ){
+            if($data["1.店舗名"]==$_POST["name"]){
+                $data["1.店舗名"]=$_POST["name"];
+                $data["2.出勤者"]=$_POST["come_m"];
+                $data["3.出前者"]=$_POST["out_m"];
+                $data["4.店舗在任"]=$_POST["store_in"];
+                $data["5.必要人数"]=$_POST["need_m"];
+            }
+        }
+        //書き込み
+        $fp = fopen('data2.csv', 'w');
+        foreach($datas as $data){
+    	    $line = implode(',' , $data);
+	        fwrite($fp, $line . "\n");
+        }
+        fclose($fp);
     }
 
 
