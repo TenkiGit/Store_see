@@ -42,6 +42,7 @@ function main(){
         foreach($csv as $key=>$data ){
             if($data["1.店舗名"]==$_POST["name"]){
                 $data=array_replace($data, $inp_data);
+                var_dump($data);
             }
         }
         // //書き込み
