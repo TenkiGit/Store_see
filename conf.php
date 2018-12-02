@@ -42,7 +42,7 @@ function main(){
         foreach($csv as $key=>$data ){
             if($data["1.店舗名"]==$_POST["name"]){
                 unset($csv[$key]);
-                $csv=array_push($csv, [$key]=>$inp_data);
+                $csv=$csv+array([$key]=>$inp_data);
                 // var_dump($data);
             }
             
