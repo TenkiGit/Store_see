@@ -35,7 +35,7 @@ function main(){
             $count+=1;
         }
     }
-
+    var_dump($csv);
 
 
     if($count==1){
