@@ -49,12 +49,15 @@ function main(){
             
         }
         // //書き込み
-        // $fp = fopen('data2.csv', 'w');
-        // foreach($data as $data2){
-    	//     $line = implode(',' , $data2);
-	    //     fwrite($fp, $line . "\n");
-        // }
-        // fclose($fp);
+        $fp = fopen('data2.csv', 'w');
+        foreach($csv as $data2){
+    	    $line = implode(',' , $data2);
+	        fwrite($fp, $line . "\n");
+        }
+        fclose($fp);
+
+
+
         // $csv=array_merge($csv, $inp_data);
         // $csv=array_replace($csv, $inp_data);
         // var_dump($count);
