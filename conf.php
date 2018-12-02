@@ -41,9 +41,9 @@ function main(){
         $inp_data= array("1.店舗名"=>$_POST["name"],"2.出勤者"=>$_POST["come_m"],"3.出前者"=>$_POST["out_m"],"4.店舗在任"=>$_POST["store_in"],"5.必要人数"=>$_POST["need_m"]);
         foreach($csv as $key=>$data ){
             if($data["1.店舗名"]==$_POST["name"]){
-                unset($csv[$key]);
-                $csv=$csv+array([$key]=>$inp_data);
-                // var_dump($data);
+                // unset($csv[$key]);
+                $data=array_merge($data, $inp_data);
+                var_dump($data);
             }
             
         }
@@ -58,7 +58,7 @@ function main(){
         // $csv=array_replace($csv, $inp_data);
         // var_dump($count);
         // $csv=array_merge($csv, $inp_data);
-        var_dump($csv);
+        // var_dump($csv);
         // var_dump($data);
     }
 
