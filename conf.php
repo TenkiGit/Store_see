@@ -19,7 +19,7 @@ function main(){
     $file = 'data.csv';
     $fp = fopen($file, 'r');
     //$sh = stream_filter_prepend($fp, 'convert.iconv.cp932/utf-8', STREAM_FILTER_READ);
-    $csv = array();
+    $csv = array("1.店舗名","2.出勤者","3.出前者","4.店舗在任","5.必要人数");
     $keys = null;
     while ($data = fgetcsv($fp, 1000,",")) {
         if ($keys === null) {
