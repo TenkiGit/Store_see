@@ -32,7 +32,7 @@ function main(){
     //if-post==csv->OnFlags
     foreach($csv as $key=>$data ){
    
-        var_dump($data);
+        // var_dump($data);
         if($data["1.店舗名"]==$_POST["name"]){
             $count+=1;
         }
@@ -56,8 +56,9 @@ function main(){
         // }
         // fclose($fp);
         // $csv=array_merge($csv, $inp_data);
-        var_dump($count);
-        // var_dump($csv);
+        $csv=array_replace($csv, $inp_data);
+        // var_dump($count);
+        var_dump($csv);
         // var_dump($data);
     }
 
