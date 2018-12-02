@@ -43,7 +43,8 @@ function main(){
             if($data["1.店舗名"]==$_POST["name"]){
                 // unset($csv[$key]);
                 $data=array_merge($data, $inp_data);
-                var_dump($data);
+                // var_dump($data);
+                $csv[$key]=$data;
             }
             
         }
@@ -58,7 +59,7 @@ function main(){
         // $csv=array_replace($csv, $inp_data);
         // var_dump($count);
         // $csv=array_merge($csv, $inp_data);
-        // var_dump($csv);
+        var_dump($csv);
         // var_dump($data);
     }
 
