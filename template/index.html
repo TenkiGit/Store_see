@@ -42,26 +42,24 @@
 		</tr>
 	</table> -->
 <table>
-	<caption>現在の状況
-		<?php echo date("Y/m/d H:i:s") ?>
-	</caption>
-	<tr style="background:#ccccff">
-		<th>店舗名</th>
-		<th>出勤者</th>
-		<th>出前者</th>
-		<th>店舗在任</th>
-		<th>必要人数</th>
-	</tr>
+	
 	<?php
 	$filepath="./data.csv";
 	$coun=0;
 	$fp = fopen($filepath, "r");
 	while ($data = fgetcsv($fp, 10000)) {
+		if($coun==0){
+			print "<tr style='background:#ccccff'>";
+		}else{
 			print "<tr>";
+		}
+		
+		
 			foreach ($data as $d) {
 				print "<td>$d</td>";
 			}
 			print "</tr>\n";
+		$coun++;
 	}
 	
 	?>
