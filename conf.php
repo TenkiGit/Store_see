@@ -39,15 +39,11 @@ function main(){
     }
     if($count==1){
         $inp_data= ["1.店舗名"=>$_POST["name"],"2.出勤者"=>$_POST["come_m"],"3.出前者"=>$_POST["out_m"],"4.店舗在任"=>$_POST["store_in"],"5.必要人数"=>$_POST["need_m"]];
-        // foreach($csv as $key=>$data ){
-        //     if($data["1.店舗名"]==$_POST["name"]){
-        //         $data["1.店舗名"]=$_POST["name"];
-        //         $data["2.出勤者"]=$_POST["come_m"];
-        //         $data["3.出前者"]=$_POST["out_m"];
-        //         $data["4.店舗在任"]=$_POST["store_in"];
-        //         $data["5.必要人数"]=$_POST["need_m"];
-        //     }
-        // }
+        foreach($csv as $key=>$data ){
+            if($data["1.店舗名"]==$_POST["name"]){
+                $data=array_replace($data, $inp_data);
+            }
+        }
         // //書き込み
         // $fp = fopen('data2.csv', 'w');
         // foreach($data as $data2){
@@ -56,7 +52,7 @@ function main(){
         // }
         // fclose($fp);
         // $csv=array_merge($csv, $inp_data);
-        $csv=array_replace($csv, $inp_data);
+        // $csv=array_replace($csv, $inp_data);
         // var_dump($count);
         var_dump($csv);
         // var_dump($data);
