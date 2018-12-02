@@ -19,16 +19,19 @@ function main(){
     $file = 'data.csv';
     $fp = fopen($file, 'r');
     //$sh = stream_filter_prepend($fp, 'convert.iconv.cp932/utf-8', STREAM_FILTER_READ);
-    $csv = array("1.店舗名","2.出勤者","3.出前者","4.店舗在任","5.必要人数");
+    $csv = array();
+    $csv[0]=array("1.店舗名","2.出勤者","3.出前者","4.店舗在任","5.必要人数");
     $keys = null;
+    $while_count=1;
     while ($data = fgetcsv($fp, 1000,",")) {
         if ($keys === null) {
             $keys = $data;
         } else {
-            $csv[] = array_combine($keys, $data);
+            $csv[$while_count] = array_combine($keys, $data);
         }
+        $while_count++;
     }
-    
+    var_dump($csv);
     //if-post==csv->OnFlags
     foreach($csv as $key=>$data ){
         if($data["1.店舗名"]==$_POST["name"]){
@@ -54,7 +57,7 @@ function main(){
         }
         fclose($fp);
     }
-    var_dump($csv);
+    // var_dump($csv);
 
 	//ログインページへリダイレクト
 	// header("Location:/index.php");
