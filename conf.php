@@ -60,7 +60,7 @@ function main(){
     // var_dump($csv);
 
 	//ログインページへリダイレクト
-	// header("Location:/index.php");
+	header("Location:/index.php");
 
     return true;
 }
