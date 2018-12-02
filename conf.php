@@ -35,6 +35,9 @@ function main(){
             $count+=1;
         }
     }
+
+
+
     if($count==1){
         $inp_data= array("1.店舗名"=>$_POST["name"],"2.出勤者"=>$_POST["come_m"],"3.出前者"=>$_POST["out_m"],"4.店舗在任"=>$_POST["store_in"],"5.必要人数"=>$_POST["need_m"]);
         foreach($csv as $key=>$data ){
@@ -44,7 +47,7 @@ function main(){
             }  
         }
         // //書き込み
-        $fp = fopen('data2.csv', 'w');
+        $fp = fopen('data.csv', 'w');
         foreach($csv as $data2){
     	    $line = implode(',' , $data2);
 	        fwrite($fp, $line . "\n");
