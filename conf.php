@@ -56,8 +56,8 @@ function main(){
         // }
         // fclose($fp);
         $csv=array_merge($csv, $inp_data);
-        printf("\n");
         var_dump($count);
+        echo "\n";
         var_dump($csv);
         // var_dump($data);
     }
