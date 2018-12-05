@@ -2,7 +2,6 @@
 
 
 include_once("./common/common.php");
-// include_once("./login.php");
 
 try{
 	main();
